@@ -11,23 +11,27 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <link rel="stylesheet" type="text/css"
 	href="/compartimos/res/css/styles.css">
+
 </head>
 <body>
 	<%@ include file='navbar.jsp'%>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="text-center">
 			<h1>Lista de servicios</h1>
 		</div>
 		<table class="table">
-			<thead class="thead-dark">
+			<thead class="table-primary">
 				<tr>
 					<th scope="col">Id Servicio</th>
 					<th scope="col">Servicio</th>
 					<th scope="col">Precio</th>
 					<th scope="col">Número de perfiles</th>
 					<th scope="col">Edición</th>
+					<th scope="col">Eliminar</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -37,12 +41,22 @@
 						<td>${servicio.nombre}</td>
 						<td>${servicio.precio}</td>
 						<td>${servicio.numeroPerfiles}</td>
-						<td><a href="editar-servicio/${servicio.idServicio}">Editar</a></td>
+						<td>
+							<button type="button" class="btn btn-primary editarBtn" data-id="${servicio.idServicio}">
+								<i class="bi bi-pen"></i> Editar
+							</button>
+						</td>
+						<td>
+							<button type="button" class="btn btn-outline-danger eliminarBtn" data-id="${servicio.idServicio}">
+								<i class="bi bi-x-circle"></i> Eliminar
+							</button>
+						</td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 	</div>
+	<script src="/compartimos/res/js/listadoServicios.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>

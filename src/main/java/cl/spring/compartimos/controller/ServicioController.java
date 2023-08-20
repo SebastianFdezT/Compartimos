@@ -56,4 +56,14 @@ public class ServicioController {
         ps.create(servicio);
         return "redirect:/servicios";
     }
+	@GetMapping("/eliminar-servicio/{id}")
+    @Transactional
+    public String eliminarServicio(@PathVariable int id) {
+        try {
+            ps.delete(id);
+            return "redirect:/servicios";
+        } catch (Exception e) {
+            throw new RuntimeException("Error al eliminar el servicio", e);
+        }
+    }
 }

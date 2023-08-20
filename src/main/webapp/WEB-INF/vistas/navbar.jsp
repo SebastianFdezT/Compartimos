@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <header>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- style="background-color: #B8DAFF; -->
+	<nav class="navbar navbar-expand-lg navbar-light">
 		<a class="navbar-brand" href="/compartimos">Compartimos</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
@@ -22,10 +23,10 @@
 					class="nav-link dropdown-toggle" href="#"
 					id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false">Servicios</a>
-					<div class="dropdown-menu bg-dark"
+					<div class="dropdown-menu"
 						aria-labelledby="navbarDropdownMenuLink">
-						<a class="nav-link" href="servicios">Lista de servicios</a> <a
-							class="nav-link" href="crear-servicio">Crear un servicio</a>
+						<a class="nav-link" href="/compartimos/servicios">Lista de servicios</a> <a
+							class="nav-link" href="/compartimos/crear-servicio">Crear un servicio</a>
 					</div></li>
 
 				<%
