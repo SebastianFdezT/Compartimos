@@ -39,6 +39,9 @@
 						class="form-control" type="password" name="password">
 				</div>
 				<div class="mb-3 text-center">
+					¿No tienes una cuenta? <a href="/compartimos/crear-usuario">Crea una cuenta</a>
+				</div>
+				<div class="mb-3 text-center">
 					<input class="btn btn-primary btn-lg btn-block" type="submit"
 						name="submit" value="Ingresar">
 				</div>

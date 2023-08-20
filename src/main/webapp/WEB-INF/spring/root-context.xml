@@ -53,9 +53,10 @@
 
 	<!-- -->
 	<!-- -->
-
+	<!-- <context:component-scan
+		base-package="cl.spring.compartimos.model"></context:component-scan> -->
 	<context:component-scan
-		base-package="cl.spring.compartimos.model"></context:component-scan>
+		base-package="cl.spring.compartimos"></context:component-scan>
 	<tx:annotation-driven
 		transaction-manager="transactionManager" />
 	<jpa:repositories
