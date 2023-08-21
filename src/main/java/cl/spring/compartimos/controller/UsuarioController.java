@@ -23,10 +23,6 @@ public class UsuarioController {
     }
     @PostMapping("/crear-usuario")
     public String crearUsuario(@ModelAttribute Usuario usuario) {
-    	System.out.println("____________________________");
-		System.out.println("//////////////////////////////////" + usuario.getUsuario());
-		System.out.println("//////////////////////////////////" + usuario.getContrasena());
-		System.out.println("____________________________");
     	us.crearUsuario(usuario);
         return "redirect:/";
     }

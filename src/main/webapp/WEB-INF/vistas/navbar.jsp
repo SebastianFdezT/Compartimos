@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <header>
-<!-- style="background-color: #B8DAFF; -->
+	<!-- style="background-color: #B8DAFF; -->
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<a class="navbar-brand" href="/compartimos">Compartimos</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -23,10 +23,27 @@
 					class="nav-link dropdown-toggle" href="#"
 					id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false">Servicios</a>
-					<div class="dropdown-menu"
-						aria-labelledby="navbarDropdownMenuLink">
-						<a class="nav-link" href="/compartimos/servicios">Lista de servicios</a> <a
-							class="nav-link" href="/compartimos/crear-servicio">Crear un servicio</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="nav-link" href="/compartimos/servicios">Lista de
+							servicios</a> <a class="nav-link" href="/compartimos/crear-servicio">Crear
+							un servicio</a>
+					</div></li>
+
+				<%
+				}
+				%>
+
+				<%
+				if (request.isUserInRole("ROLE_proveedor")) {
+				%>
+
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#"
+					id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">Servicios</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="nav-link" href="/compartimos/crear-relacion">Agregar
+							servicio a compartir</a>
 					</div></li>
 
 				<%
